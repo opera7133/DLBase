@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>DLBase | ダウンロードHTMLを作成</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="/files/make/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+
+<body>
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo">DLBase</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/make.html">作成</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/make.html">作成</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h4>ファイルを作成</h4>
+        <div class="row">
+            <form class="col s12" action="./make.php" method="post">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="mega" name="mega" type="text" class="validate">
+                        <label for="mega">Mega</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="google-drive" name="google-drive" type="text" class="validate">
+                        <label for="google-drive">Google Drive</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="mediafire" name="mediafire" type="text" class="validate">
+                        <label for="mediafire">Mediafire</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="dropbox" name="dropbox" type="text" class="validate">
+                        <label for="dropbox">Dropbox</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="box" name="box" type="text" class="validate">
+                        <label for="box">Box</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="direct" name="direct" type="text" class="validate">
+                        <label for="direct">Direct Link</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="author" name="author" type="text" class="validate" required>
+                        <label for="author">Author</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="file" name="file" type="text" class="validate" required>
+                        <label for="file">File Name</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">作成
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/files/make/js/jquery.particleground.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/files/make/js/init.js"></script>
+</body>
+
+</html>
