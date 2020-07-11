@@ -27,8 +27,7 @@ $direct = "<%DIRECT>";
 	<meta property="og:site_name" content="DLBase">
 	<meta property="og:description" content="<%FILE> をダウンロード">
 	<meta property="og:locale" content="ja_JP">
-	<meta property="fb:app_id" content="355055424548858">
-	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:card" content="summary">
 	<meta name="twitter:url" content="https://dlbase.cf/link/<%FILENAME>">
 	<meta name="twitter:title" content="<%FILE> をダウンロード">
 	<meta name="twitter:image"
