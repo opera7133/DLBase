@@ -36,7 +36,7 @@ $direct = "<%DIRECT>";
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link href="/files/dl/css/fonts.css" rel="stylesheet">
-	<title>Download <%FILE></title>
+	<title>DLBase | Download <%FILE></title>
 	<link rel="stylesheet" href="/files/dl/css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/fa42a17412.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="/files/dl/css/dlbase.css">
