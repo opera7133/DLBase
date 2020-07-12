@@ -24,7 +24,7 @@
                 <li><a href="/">ホーム</a></li>
                 <li><a href="/make.html">作成</a></li>
             </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger red-text"><i class="material-icons">menu</i></a>
         </div>
     </nav>
     <div class="container">
@@ -37,12 +37,24 @@
                 <label><input type="checkbox" class="filled-in" id="cloud2" onclick="showURL();" /><span>Google
                         Drive</span></label><br>
                 <label><input type="checkbox" class="filled-in" id="cloud3"
-                        onclick="showURL();" /><span>Mediafire</span></label><br>
+                        onclick="showURL();" /><span>OneDrive</span></label><br>
                 <label><input type="checkbox" class="filled-in" id="cloud4"
-                        onclick="showURL();" /><span>Dropbox</span></label><br>
+                        onclick="showURL();" /><span>Mediafire</span></label><br>
                 <label><input type="checkbox" class="filled-in" id="cloud5"
-                        onclick="showURL();" /><span>Box</span></label><br>
+                        onclick="showURL();" /><span>Dropbox</span></label><br>
                 <label><input type="checkbox" class="filled-in" id="cloud6"
+                        onclick="showURL();" /><span>Box</span></label><br>
+                <label><input type="checkbox" class="filled-in" id="cloud7"
+                        onclick="showURL();" /><span>Icedrive</span></label><br>
+                <label><input type="checkbox" class="filled-in" id="cloud8"
+                        onclick="showURL();" /><span>Cloud mail.ru</span></label><br>
+                <label><input type="checkbox" class="filled-in" id="cloud9"
+                        onclick="showURL();" /><span>pCloud</span></label><br>
+                <label><input type="checkbox" class="filled-in" id="cloud10"
+                        onclick="showURL();" /><span>Sync</span></label><br>
+                <label><input type="checkbox" class="filled-in" id="cloud11"
+                        onclick="showURL();" /><span>Yandex.Disk</span></label><br>
+                <label><input type="checkbox" class="filled-in" id="cloud0"
                         onclick="showURL();" /><span>直リンク</span></label><br>
                 <div class="row" id="megaf" name="megaf">
                     <div class="input-field col s12">
@@ -54,6 +66,12 @@
                     <div class="input-field col s12">
                         <input id="google-drive" name="google-drive" type="text" class="validate">
                         <label for="google-drive">Google Drive URL</label>
+                    </div>
+                </div>
+                <div class="row" id="ondf">
+                    <div class="input-field col s12">
+                        <input id="onedrive" name="onedrive" type="text" class="validate">
+                        <label for="onedrive">OneDrive URL</label>
                     </div>
                 </div>
                 <div class="row" id="medf">
@@ -74,6 +92,36 @@
                         <label for="box">Box URL</label>
                     </div>
                 </div>
+                <div class="row" id="icef">
+                    <div class="input-field col s12">
+                        <input id="icedrive" name="icedrive" type="text" class="validate">
+                        <label for="icedrive">Icedrive URL</label>
+                    </div>
+                </div>
+                <div class="row" id="mailf">
+                    <div class="input-field col s12">
+                        <input id="cloud-mailru" name="cloud-mailru" type="text" class="validate">
+                        <label for="cloud-mailru">Cloud mail.ru URL</label>
+                    </div>
+                </div>
+                <div class="row" id="pclf">
+                    <div class="input-field col s12">
+                        <input id="pcloud" name="pcloud" type="text" class="validate">
+                        <label for="pcloud">pCloud URL</label>
+                    </div>
+                </div>
+                <div class="row" id="sycf">
+                    <div class="input-field col s12">
+                        <input id="sync" name="sync" type="text" class="validate">
+                        <label for="sync">Sync URL</label>
+                    </div>
+                </div>
+                <div class="row" id="ynxf">
+                    <div class="input-field col s12">
+                        <input id="yandex-disk" name="yandex-disk" type="text" class="validate">
+                        <label for="yandex-disk">Yandex.Disk URL</label>
+                    </div>
+                </div>
                 <div class="row" id="drcf">
                     <div class="input-field col s12">
                         <input id="direct" name="direct" type="text" class="validate">
@@ -90,7 +138,7 @@
                         <label for="file">ファイル名</label>
                     </div>
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">作成
+                <button class="btn waves-effect waves-light red" type="submit" name="action">作成
                     <i class="material-icons right">send</i>
                 </button>
             </form>

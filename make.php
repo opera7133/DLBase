@@ -39,25 +39,46 @@
         $template = "template.php";
         $author = $request_param['author'];
         $file = $request_param['file'];
+
+        //クラウド
         $mega = $request_param['mega'];
         $box = $request_param['box'];
+        $onedrive = $request_param['onedrive'];
         $google_drive = $request_param['google-drive'];
         $dropbox = $request_param['dropbox'];
         $mediafire = $request_param['mediafire'];
+        $cloud_mailru = $request_param['cloud-mailru'];
+        $icedrive = $request_param['icedrive'];
+        $pcloud = $request_param['pcloud'];
+        $sync = $request_param['sync'];
+        $yandex_disk = $request_param['yandex-disk'];
+
+        //それ以外
         $direct = $request_param['direct'];
 
         $filename = rand(1000000, 9999999) . ".php";
 
         $contents = file_get_contents($template);
 
+        //ファイル情報
         $contents = str_replace("<%FILENAME>", htmlspecialchars($filename), $contents);
         $contents = str_replace("<%FILE>", htmlspecialchars($file), $contents);
         $contents = str_replace("<%AUTHOR>", htmlspecialchars($author), $contents);
+
+        //クラウド
         $contents = str_replace("<%MEGA>", htmlspecialchars($mega), $contents);
         $contents = str_replace("<%BOX>", htmlspecialchars($box), $contents);
+        $contents = str_replace("<%ONEDRIVE>", htmlspecialchars($onedrive), $contents);
         $contents = str_replace("<%GOOGLE_DRIVE>", htmlspecialchars($google_drive), $contents);
         $contents = str_replace("<%DROPBOX>", htmlspecialchars($dropbox), $contents);
         $contents = str_replace("<%MEDIAFIRE>", htmlspecialchars($mediafire), $contents);
+        $contents = str_replace("<%CLOUD_MAILRU>", htmlspecialchars($cloud_mailru), $contents);
+        $contents = str_replace("<%ICEDRIVE>", htmlspecialchars($icedrive), $contents);
+        $contents = str_replace("<%PCLOUD>", htmlspecialchars($pcloud), $contents);
+        $contents = str_replace("<%SYNC>", htmlspecialchars($sync), $contents);
+        $contents = str_replace("<%YANDEX_DISK>", htmlspecialchars($yandex_disk), $contents);
+
+        //それ以外
         $contents = str_replace("<%DIRECT>", htmlspecialchars($direct), $contents);
 
         // ファイル生成＆書き込み

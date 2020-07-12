@@ -5,9 +5,15 @@
 
 $mega = "<%MEGA>";
 $google_drive = "<%GOOGLE_DRIVE>";
+$onedrive = "<%ONEDRIVE>";
 $mediafire= "<%MEDIAFIRE>";
 $box = "<%BOX>";
-$sropbox = "<%DROPBOX>";
+$dropbox = "<%DROPBOX>";
+$cloud_mailru = "<%CLOUD_MAILRU>";
+$icedrive = "<%ICEDRIVE>";
+$pcloud = "<%PCLOUD>";
+$sync = "<%SYNC>";
+$yandex_disk = "<%YANDEX_DISK>";
 $direct = "<%DIRECT>";
 
 ?>
@@ -130,6 +136,23 @@ $direct = "<%DIRECT>";
 												</picture>
 											</span></a></li>
 											<?php endif; ?>
+											<?php if (!empty($onedrive)) : ?>
+									<li><a href="<%ONEDRIVE>"
+											title="Onedriveからダウンロード"><span class="store">
+												<picture>
+													<img class="mb5 lazyautosizes lazyloaded" alt="Onedriveからダウンロード"
+														width="107" height="40" data-sizes="auto"
+														data-src="/files/img/onedrive.1x.png"
+														data-srcset="/files/img/onedrive.1x.png 1x, /files/img/onedrive.2x.png 2x, /files/img/onedrive.3x.png 3x"
+														sizes="107px"
+														srcset="/files/img/onedrive.1x.png 1x, /files/img/onedrive.2x.png 2x, /files/img/onedrive.3x.png 3x"
+														src="/files/img/onedrive.1x.png"><noscript><img class=mb5
+															alt=Onedriveからダウンロード width=107 height=40
+															src=/files/img/onedrive.1x.png
+															srcset="/files/onedrive.1x.png 1x, /files/onedrive.2x.png 2x, /files/img/onedrive.3x.png 3x"></noscript>
+												</picture>
+											</span></a></li>
+											<?php endif; ?>
 											<?php if (!empty($mediafire)) : ?>
 									<li><a href="<%MEDIAFIRE>"
 											title="MediaFireからダウンロード"><span class="store">
@@ -161,6 +184,91 @@ $direct = "<%DIRECT>";
 															alt="Boxからダウンロード" width=107 height=40
 															src=/files/img/box.1x.png
 															srcset="/files/img/box.1x.png 1x, /files/img/box.2x.png 2x, /files/img/box.3x.png 3x"></noscript>
+												</picture>
+											</span></a></li>
+											<?php endif; ?>
+											<?php if (!empty($cloud_mailru)) : ?>
+									<li><a href="<%CLOUD_MAILRU>"
+											title="Cloud mail.ruからダウンロード"><span class="store">
+												<picture>
+													<img class="mb5 lazyautosizes lazyloaded" alt="Cloud mail.ruからダウンロード"
+														width="107" height="40" data-sizes="auto"
+														data-src="/files/img/cloud_mailru.1x.png"
+														data-srcset="/files/img/cloud_mailru.1x.png 1x, /files/img/cloud_mailru.2x.png 2x, /files/img/cloud_mailru.3x.png 3x"
+														sizes="107px"
+														srcset="/files/img/cloud_mailru.1x.png 1x, /files/img/cloud_mailru.2x.png 2x, /files/img/cloud_mailru.3x.png 3x"
+														src="/files/img/cloud_mailru.1x.png"><noscript><img class=mb5
+															alt="Cloud mail.ruからダウンロード" width=107 height=40
+															src=/files/img/cloud_mailru.1x.png
+															srcset="/files/img/cloud_mailru.1x.png 1x, /files/img/cloud_mailru.2x.png 2x, /files/img/cloud_mailru.3x.png 3x"></noscript>
+												</picture>
+											</span></a></li>
+											<?php endif; ?>
+											<?php if (!empty($icedrive)) : ?>
+									<li><a href="<%ICEDRIVE>"
+											title="Icedriveからダウンロード"><span class="store">
+												<picture>
+													<img class="mb5 lazyautosizes lazyloaded" alt="Icedriveからダウンロード"
+														width="107" height="40" data-sizes="auto"
+														data-src="/files/img/icedrive.1x.png"
+														data-srcset="/files/img/icedrive.1x.png 1x, /files/img/icedrive.2x.png 2x, /files/img/icedrive.3x.png 3x"
+														sizes="107px"
+														srcset="/files/img/icedrive.1x.png 1x, /files/img/icedrive.2x.png 2x, /files/img/icedrive.3x.png 3x"
+														src="/files/img/icedrive.1x.png"><noscript><img class=mb5
+															alt="Icedriveからダウンロード" width=107 height=40
+															src=/files/img/icedrive.1x.png
+															srcset="/files/img/icedrive.1x.png 1x, /files/img/icedrive.2x.png 2x, /files/img/icedrive.3x.png 3x"></noscript>
+												</picture>
+											</span></a></li>
+											<?php endif; ?>
+											<?php if (!empty($pcloud)) : ?>
+									<li><a href="<%PCLOUD>"
+											title="pCloudからダウンロード"><span class="store">
+												<picture>
+													<img class="mb5 lazyautosizes lazyloaded" alt="pCloudからダウンロード"
+														width="107" height="40" data-sizes="auto"
+														data-src="/files/img/pcloud.1x.png"
+														data-srcset="/files/img/pcloud.1x.png 1x, /files/img/pcloud.2x.png 2x, /files/img/pcloud.3x.png 3x"
+														sizes="107px"
+														srcset="/files/img/pcloud.1x.png 1x, /files/img/pcloud.2x.png 2x, /files/img/pcloud.3x.png 3x"
+														src="/files/img/pcloud.1x.png"><noscript><img class=mb5
+															alt="pCloudからダウンロード" width=107 height=40
+															src=/files/img/pcloud.1x.png
+															srcset="/files/img/pcloud.1x.png 1x, /files/img/pcloud.2x.png 2x, /files/img/pcloud.3x.png 3x"></noscript>
+												</picture>
+											</span></a></li>
+											<?php endif; ?>
+											<?php if (!empty($sync)) : ?>
+									<li><a href="<%SYNC>"
+											title="Syncからダウンロード"><span class="store">
+												<picture>
+													<img class="mb5 lazyautosizes lazyloaded" alt="Syncからダウンロード"
+														width="107" height="40" data-sizes="auto"
+														data-src="/files/img/sync.1x.png"
+														data-srcset="/files/img/sync.1x.png 1x, /files/img/sync.2x.png 2x, /files/img/sync.3x.png 3x"
+														sizes="107px"
+														srcset="/files/img/sync.1x.png 1x, /files/img/sync.2x.png 2x, /files/img/sync.3x.png 3x"
+														src="/files/img/sync.1x.png"><noscript><img class=mb5
+															alt="Syncからダウンロード" width=107 height=40
+															src=/files/img/sync.1x.png
+															srcset="/files/img/sync.1x.png 1x, /files/img/sync.2x.png 2x, /files/img/sync.3x.png 3x"></noscript>
+												</picture>
+											</span></a></li>
+											<?php endif; ?>
+											<?php if (!empty($yandex_disk)) : ?>
+									<li><a href="<%YANDEX_DISK>"
+											title="Yandex.Diskからダウンロード"><span class="store">
+												<picture>
+													<img class="mb5 lazyautosizes lazyloaded" alt="Yandex.Diskからダウンロード"
+														width="107" height="40" data-sizes="auto"
+														data-src="/files/img/yandex_disk.1x.png"
+														data-srcset="/files/img/yandex_disk.1x.png 1x, /files/img/yandex_disk.2x.png 2x, /files/img/yandex_disk.3x.png 3x"
+														sizes="107px"
+														srcset="/files/img/yandex_disk.1x.png 1x, /files/img/yandex_disk.2x.png 2x, /files/img/yandex_disk.3x.png 3x"
+														src="/files/img/yandex_disk.1x.png"><noscript><img class=mb5
+															alt="Yandex.Diskからダウンロード" width=107 height=40
+															src=/files/img/yandex_disk.1x.png
+															srcset="/files/img/yandex_disk.1x.png 1x, /files/img/yandex_disk.2x.png 2x, /files/img/yandex_disk.3x.png 3x"></noscript>
 												</picture>
 											</span></a></li>
 											<?php endif; ?>
