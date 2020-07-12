@@ -56,7 +56,8 @@
         //それ以外
         $direct = $request_param['direct'];
 
-        $filename = rand(1000000, 9999999) . ".php";
+        $file = rand(1000000, 9999999);
+        $filename = $file . ".php";
 
         $contents = file_get_contents($template);
 
@@ -86,10 +87,10 @@
         fwrite($handle, $contents);
         fclose($handle);
 
-        $link = "/link/" . $filename;
+        $link = "/link/" . $file;
 
         // メッセージ表示
-        echo '<div class="container center"><p><a href=' . $link . '>' . $filename . '</a>を生成しました。</p>';
+        echo '<div class="container center"><p><a href=' . $link . '>' . $file . '</a>を生成しました。</p>';
         echo '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="DLBase" data-size="large" data-url="https://dlbase.cf' . $link . '" class="twitter-share-button" data-show-count="false" data-lang="ja">ツイート</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
         echo '<iframe style="padding-left:10px;" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdlbase.cf' . $link . '&layout=button&size=large&width=79&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>';
     }
