@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>DLBase | 処理中</title>
+    <title>DLBase | 完了</title>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="./files/make/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -29,6 +29,16 @@
     </nav>
     <?php
 
+    function makeRandStr($length)
+    {
+        $str = array_merge(range('a', 'z'), range('0', '9'), range('A', 'Z'));
+        $r_str = null;
+        for ($i = 0; $i < $length; $i++) {
+            $r_str .= $str[rand(0, count($str) - 1)];
+        }
+        return $r_str;
+    }
+
     if (empty($_SERVER["HTTP_REFERER"])) {
         header('Location: https://dlbase.cf/');
     } else {
@@ -39,6 +49,7 @@
         $template = "template.php";
         $author = $request_param['author'];
         $file = $request_param['file'];
+        $filept = pathinfo($file);
 
         //クラウド
         $mega = $request_param['mega'];
@@ -56,10 +67,31 @@
         //それ以外
         $direct = $request_param['direct'];
 
-        $file = rand(1000000, 9999999);
-        $filename = $file . ".php";
+        $filenum = makeRandStr(8);
+        $filename = $filenum . ".php";
 
         $contents = file_get_contents($template);
+        $imgext = array('png', 'jpg', 'jpeg', 'raw', 'gif', 'bmp', 'heic', 'svg', 'tif', 'tiff', 'eps', 'ico');
+        $vidext = array('mp4', 'avi', 'mpg', 'mov', 'wmv', 'mkv', 'flv', 'm4a', 'ts', 'webm', 'ogm', 'mts');
+        $code = array('html', 'php', 'py', 'python', 'cs', 'cpp', 'hsp', 'sh', 'c', 'bash', 'exe', 'go', 'h', 'java', 'jar', 'lua', 'pl', 'rb', 'scala', 'vb', 'md', 'coffee', 'ws', 'b');
+        $audioext = array('mp3', 'mid', 'midi', 'wav', 'wma', 'aif', 'aiff', 'aac', 'ogg', 'oga', 'flac', 'tta', 'opus', 'asf');
+        $archiveext = array('zip', 'zipx', 'tar', 'tgz', 'taz', 'cab', 'aiff', 'lzh', 'lha', 'rar', 'ace', 'lzma');
+
+        if (in_array($filept['extension'], $imgext)) {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/img.png"), $contents);
+        } elseif (in_array($filept['extension'], $vidext)) {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/video.png"), $contents);
+        } elseif (in_array($filept['extension'], $code)) {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/code.png"), $contents);
+        } elseif (in_array($filept['extension'], $audioext)) {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/audio.png"), $contents);
+        } elseif (in_array($filept['extension'], $archiveext)) {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/archive.png"), $contents);
+        } elseif ($filept['extension'] = "pdf") {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/pdf.png"), $contents);
+        } else {
+            $contents = str_replace("<%IMG>", htmlspecialchars("/files/img/file.png"), $contents);
+        }
 
         //ファイル情報
         $contents = str_replace("<%FILENAME>", htmlspecialchars($filename), $contents);
@@ -87,10 +119,10 @@
         fwrite($handle, $contents);
         fclose($handle);
 
-        $link = "/link/" . $file;
+        $link = "/link/" . $filenum;
 
         // メッセージ表示
-        echo '<div class="container center"><p><a href=' . $link . '>' . $file . '</a>を生成しました。</p>';
+        echo '<div class="container center"><p><a href=' . $link . '>' . $filenum . '</a>を生成しました。</p>';
         echo '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="DLBase" data-size="large" data-url="https://dlbase.cf' . $link . '" class="twitter-share-button" data-show-count="false" data-lang="ja">ツイート</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
         echo '<iframe style="padding-left:10px;" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdlbase.cf' . $link . '&layout=button&size=large&width=79&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>';
     }

@@ -5,6 +5,13 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
+function allcheck(tf) {
+  var ElementsCount = document.makepage.elements.length;
+  for (i = 0; i < ElementsCount; i++) {
+    document.makepage.elements[i].checked = tf;
+  }
+}
+
 function showURL() {
   check1 = document.getElementById("cloud1");
   check2 = document.getElementById("cloud2");

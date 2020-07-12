@@ -3,46 +3,46 @@
 
 <?php 
 
-$mega = "<%MEGA>";
-$google_drive = "<%GOOGLE_DRIVE>";
-$onedrive = "<%ONEDRIVE>";
-$mediafire= "<%MEDIAFIRE>";
-$box = "<%BOX>";
-$dropbox = "<%DROPBOX>";
-$cloud_mailru = "<%CLOUD_MAILRU>";
-$icedrive = "<%ICEDRIVE>";
-$pcloud = "<%PCLOUD>";
-$sync = "<%SYNC>";
-$yandex_disk = "<%YANDEX_DISK>";
-$direct = "<%DIRECT>";
+$mega = "https://mega.nz";
+$google_drive = "";
+$onedrive = "";
+$mediafire= "";
+$box = "";
+$dropbox = "";
+$cloud_mailru = "";
+$icedrive = "";
+$pcloud = "";
+$sync = "";
+$yandex_disk = "";
+$direct = "";
 
 ?>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="description" content="<%FILE> をダウンロード">
+	<meta name="description" content="test.html をダウンロード">
 	<meta name="thumbnail"
 		content="/files/img/background.png">
 	<meta name="viewport" content="width=device-width">
 	<meta name="format-detection" content="telephone=no">
 	<meta property="og:title" content="DLBase">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://dlbase.cf/link/<%FILENAME>">
+	<meta property="og:url" content="https://dlbase.cf/link/kD2Chr24.php">
 	<meta property="og:image"
 		content="/files/img/background.png">
 	<meta property="og:site_name" content="DLBase">
-	<meta property="og:description" content="<%FILE> をダウンロード">
+	<meta property="og:description" content="test.html をダウンロード">
 	<meta property="og:locale" content="ja_JP">
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:url" content="https://dlbase.cf/link/<%FILENAME>">
-	<meta name="twitter:title" content="<%FILE> をダウンロード">
+	<meta name="twitter:url" content="https://dlbase.cf/link/kD2Chr24.php">
+	<meta name="twitter:title" content="test.html をダウンロード">
 	<meta name="twitter:image"
 		content="/files/img/background.png">
-	<meta name="twitter:description" content="<%AUTHOR>">
+	<meta name="twitter:description" content="wamo">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link href="/files/dl/css/fonts.css" rel="stylesheet">
-	<title>DLBase | Download <%FILE></title>
+	<title>DLBase | Download test.html</title>
 	<link rel="stylesheet" href="/files/dl/css/bootstrap.min.css">
 	<script src="https://kit.fontawesome.com/fa42a17412.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="/files/dl/css/dlbase.css">
@@ -73,12 +73,12 @@ $direct = "<%DIRECT>";
 					<div class="listening clearfix">
 						<div class="cover">
 							<div class="title">
-								<img src="<%IMG>"/>
+								<img src="/files/img/code.png"/>
 								<div class="release_title">
-									<h1 title="<%FILE>"><%FILE></h1>
+									<h1 title="test.html">test.html</h1>
 								</div>
 								<div class="artist_name">
-									<h2 class="name"><%AUTHOR></h2>
+									<h2 class="name">wamo</h2>
 								</div>
 							</div>
 						</div>
@@ -86,7 +86,7 @@ $direct = "<%DIRECT>";
 							<div class="info">
 								<ul class="store_icon">
 								<?php if (!empty($google_drive)) : ?>
-									<li><a href="<%GOOGLE_DRIVE>"
+									<li><a href=""
 											title="Google Driveからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Google Driveからダウンロード"
@@ -103,7 +103,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($mega)) : ?>
-									<li><a href="<%MEGA>"
+									<li><a href="https://mega.nz"
 											title="MEGAからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="MEGAからダウンロード"
@@ -120,7 +120,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($dropbox)) : ?>
-									<li><a href="<%DROPBOX>"
+									<li><a href=""
 											title="Dropboxからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Dropboxからダウンロード"
@@ -137,7 +137,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($onedrive)) : ?>
-									<li><a href="<%ONEDRIVE>"
+									<li><a href=""
 											title="Onedriveからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Onedriveからダウンロード"
@@ -154,7 +154,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($mediafire)) : ?>
-									<li><a href="<%MEDIAFIRE>"
+									<li><a href=""
 											title="MediaFireからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="MediaFireからダウンロード"
@@ -171,7 +171,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($box)) : ?>
-									<li><a href="<%BOX>"
+									<li><a href=""
 											title="Boxからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Boxからダウンロード"
@@ -188,7 +188,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($cloud_mailru)) : ?>
-									<li><a href="<%CLOUD_MAILRU>"
+									<li><a href=""
 											title="Cloud mail.ruからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Cloud mail.ruからダウンロード"
@@ -205,7 +205,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($icedrive)) : ?>
-									<li><a href="<%ICEDRIVE>"
+									<li><a href=""
 											title="Icedriveからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Icedriveからダウンロード"
@@ -222,7 +222,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($pcloud)) : ?>
-									<li><a href="<%PCLOUD>"
+									<li><a href=""
 											title="pCloudからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="pCloudからダウンロード"
@@ -239,7 +239,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($sync)) : ?>
-									<li><a href="<%SYNC>"
+									<li><a href=""
 											title="Syncからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Syncからダウンロード"
@@ -256,7 +256,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($yandex_disk)) : ?>
-									<li><a href="<%YANDEX_DISK>"
+									<li><a href=""
 											title="Yandex.Diskからダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="Yandex.Diskからダウンロード"
@@ -273,7 +273,7 @@ $direct = "<%DIRECT>";
 											</span></a></li>
 											<?php endif; ?>
 											<?php if (!empty($direct)) : ?>
-									<li><a href="<%DIRECT>"
+									<li><a href=""
 											title="直接ダウンロード"><span class="store">
 												<picture>
 													<img class="mb5 lazyautosizes lazyloaded" alt="直接ダウンロード"
