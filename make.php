@@ -124,9 +124,11 @@
         // メッセージ表示
         echo '<div class="container center"><p><a href=' . $link . '>' . $filenum . '</a>を生成しました。</p>';
         echo '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="DLBase" data-size="large" data-url="https://dlbase.cf' . $link . '" class="twitter-share-button" data-show-count="false" data-lang="ja">ツイート</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
-        echo '<iframe style="padding-left:10px;" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdlbase.cf' . $link . '&layout=button&size=large&width=79&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe></div>';
+        echo '<iframe style="margin-left:10px;" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdlbase.cf' . $link . '&layout=button&size=large&width=69&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';
+        echo '<div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="https://dlbase.cf' . $link . '" data-color="default" data-size="large" data-count="false" style="display: none;"></div></div>';
     }
     ?>
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="/files/make/js/init.js"></script>
