@@ -30,6 +30,7 @@
         </div>
     </nav>
     <?php
+    ini_set('display_errors', "On");
     //POSTの処理
     $id = isset($_POST['id']) ? $_POST['id'] : "false";
     $pswd = isset($_POST['pswd']) ? $_POST['pswd'] : "false";
@@ -91,8 +92,7 @@
                         $i = $new_data[2];
                         unset($file[$i]);
                         file_put_contents($file_name, $file);
-                        $link = '/link/' . $id . '.php';
-                        unlink($link);
+                        $link = 'link/' . $id . '.php';
                         echo "<p>" . $id . "が削除されました。</p>";
                     } else {
                         echo "<p>パスワードが違います</p>";
