@@ -17,12 +17,14 @@
             <a id="logo-container" href="/" class="brand-logo">DLBase</a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/">ホーム</a></li>
-                <li><a href="/make.html">作成</a></li>
+                <li><a href="/make">作成</a></li>
+                <li><a href="/delete">削除</a></li>
             </ul>
 
             <ul id="nav-mobile" class="sidenav">
                 <li><a href="/">ホーム</a></li>
-                <li><a href="/make.html">作成</a></li>
+                <li><a href="/make">作成</a></li>
+                <li><a href="/delete">削除</a></li>
             </ul>
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
@@ -68,6 +70,7 @@
         $direct = $request_param['direct'];
 
         $filenum = makeRandStr(8);
+        $delpswd = makeRandStr(6);
         $filename = $filenum . ".php";
 
         $contents = file_get_contents($template);
@@ -121,8 +124,21 @@
 
         $link = "/link/" . $filenum;
 
+        // 行番号の取得
+        $lines = file("pswd.csv", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $lastline = $lines[count($lines)-1];
+        $linenums = substr($lastline, -1);
+        $linenum = $linenums + 1;
+
+        // CSV追記
+        $csv = fopen("pswd.csv", "a");
+        $idps = "\r\n" . $filenum . "," . $delpswd . "," . $linenum;
+        @fwrite($csv, $idps);
+        fclose($csv);
+
         // メッセージ表示
-        echo '<div class="container center"><p><a href=' . $link . '>' . $filenum . '</a>を生成しました。</p>';
+        echo '<div class="container center"><p>あなたのページIDは<a href=' . $link . '>' . $filenum . '</a>です。</br>';
+        echo '削除パスワードは' . $delpswd . 'です。</p>';
         echo '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="DLBase" data-size="large" data-url="https://dlbase.cf' . $link . '" class="twitter-share-button" data-show-count="false" data-lang="ja">ツイート</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
         echo '<iframe style="margin-left:10px;" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdlbase.cf' . $link . '&layout=button&size=large&width=69&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';
         echo '<div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="https://dlbase.cf' . $link . '" data-color="default" data-size="large" data-count="false" style="display: none;"></div></div>';
