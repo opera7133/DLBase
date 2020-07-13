@@ -93,6 +93,8 @@
                         unset($file[$i]);
                         file_put_contents($file_name, $file);
                         $link = 'link/' . $id . '.php';
+
+                        unlink($link);
                         echo "<p>" . $id . "が削除されました。</p>";
                     } else {
                         echo "<p>パスワードが違います</p>";
