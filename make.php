@@ -128,7 +128,7 @@
         $lines = file("pswd.csv", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $lastline = $lines[count($lines)-1];
         $linenums = substr($lastline, -1);
-        $linenum = $linenums + 1;
+        $linenum = intval($linenums) + 1;
 
         // CSV追記
         $csv = fopen("pswd.csv", "a");
