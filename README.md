@@ -2,7 +2,7 @@
 DLBaseは、MEGAやGoogle Driveなどのクラウドストレージでホストされた同じファイルを、まとめてLinkCore（TuneCoreの短縮URL）風にしてくれるプログラムです。
 
 ## URL
-[https://dlbase.cf](https://dlbase.cf)
+[https://dlbase.wmsci.com](https://dlbase.wmsci.com)
 
 ## 構成物
 - Materialize CSS 1.0.0
